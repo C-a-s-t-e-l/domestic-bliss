@@ -1,0 +1,75 @@
+---
+title: "Commercial Cleaning Services County Durham | Domestic Bliss"
+description: "Professional commercial cleaning solutions for businesses across County Durham. Specialized contracts for warehouses, retail, and shared spaces."
+permalink: "/commercial-cleaning/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Reusing your projects.css or similar if it contains the banner/content styles -->
+    <link rel="stylesheet" href="/assets/css/local.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--           Banner (Reference ID: 843)         -->
+    <!-- ============================================ -->
+    <div id="banner-843">
+        <div class="cs-container">
+            <span class="cs-int-title">Commercial Cleaning</span>
+        </div>
+        <picture class="cs-background" aria-hidden="true">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600 }) | webp %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1920 }) | webp %}">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1920 }) | jpeg %}" alt="commercial cleaning" width="1280" height="568">
+        </picture>
+        <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+        </svg>
+    </div>
+
+    <!-- ============================================ -->
+    <!--       Content Page (Reference ID: 713)       -->
+    <!-- ============================================ -->
+    <section id="content-page-713">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h1 class="cs-title">Reliable <span class="cs-color">Commercial Cleaning</span> in County Durham</h1>
+                <p>
+                    Maintaining a clean and professional commercial environment is essential for the safety of your staff and the reputation of your business. Domestic Bliss specializes in providing comprehensive cleaning contracts tailored to the unique needs of commercial properties, from retail units to industrial warehouses.
+                </p>
+                
+                <h2>Expert Solutions for Large-Scale Facilities</h2>
+                <p>
+                    Commercial spaces face high foot traffic and require more than just a surface-level wipe down. Our team is trained to handle large-scale environments using professional-grade equipment and eco-friendly cleaning agents.
+                </p>
+                
+                <h3>What Our Commercial Service Includes:</h3>
+                <ul>
+                    <li><strong>Daily & Weekly Maintenance:</strong> Consistent cleaning schedules to keep your premises pristine.</li>
+                    <li><strong>Floor Care:</strong> Professional buffing, vacuuming, and hard floor maintenance.</li>
+                    <li><strong>Sanitization:</strong> Deep cleaning of high-touch areas to ensure a hygienic workspace.</li>
+                    <li><strong>Window & Exterior Cleaning:</strong> Maintaining the professional look of your storefront or facility.</li>
+                </ul>
+
+                <h2>Customized Cleaning Contracts</h2>
+                <p>
+                    We understand that no two businesses are the same. That’s why we offer a site audit before every contract to determine the frequency and intensity of cleaning required. Whether you need an early-morning crew or an overnight team to minimize disruption, we provide the flexibility your business demands.
+                </p>
+                
+                <a href="/contact/" class="cs-button-solid">Request a Site Audit</a>
+            </div>
+            
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <img loading="lazy" decoding="async" src="/assets/images/hall.avif" alt="industrial cleaning" width="570" height="680" aria-hidden="true">
+                </picture>
+                <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fbig-abstract-flower.svg" alt="graphic" width="362" height="350" aria-hidden="true">
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

@@ -1,11 +1,12 @@
 ---
-title: "About Us| Code Stitch Web Designs"
-description: "Meta description for the page"
+title: "About Us| Domestic Bliss"
+description: "Discover Domestic Bliss Cleaning Services in County Durham. Learn about our commitment to providing reliable, high-quality professional cleaning for local offices and homes"
 permalink: "/about/"
 ---
 
 
 {% extends "layouts/base.html" %}
+
 
 {% block head %}
     <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
@@ -16,93 +17,127 @@ permalink: "/about/"
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                   Banner                     -->
+    <!--           Banner (Reference ID: 843)         -->
     <!-- ============================================ -->
-
-    <div id="banner-310">
+    <div id="banner-843">
         <div class="cs-container">
-            <span class="cs-int-title">About Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/about/" class="cs-link cs-active">About Us</a>
-            </div>
+            <span class="cs-int-title">Commercial Cleaning</span>
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        <picture class="cs-background" aria-hidden="true">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600 }) | webp %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1920 }) | webp %}">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1920 }) | jpeg %}" alt="commercial cleaning" width="1280" height="568">
         </picture>
+        <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+        </svg>
     </div>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                 Side By Side 332                -->
+<!-- ============================================ -->
 
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About CodeStitch</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/contact/" class="cs-button-solid">Get in Touch</a>
+<section id="sbs-332">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+<picture class="cs-picture">
+    <source media="(max-width: 600px)" 
+            srcset="{% getUrl "/assets/images/cleaner2.jpg" | resize({ width: 600, height: 600 }) | webp %}" 
+            type="image/webp">
+
+    <source media="(min-width: 601px)" 
+            srcset="{% getUrl "/assets/images/cleaner2.jpg" | resize({ width: 630, height: 630 }) | webp %}" 
+            type="image/webp">
+
+    <img src="{% getUrl "/assets/images/cleaner2.jpg" | resize({ width: 630, height: 630 }) | jpeg %}" 
+         alt="cleaner" 
+         width="630" height="630" 
+         loading="lazy" 
+         decoding="async" 
+         aria-hidden="true">
+</picture>
+            <div class="cs-box">
+                <span class="cs-number">100%</span>
+                <span class="cs-desc">Local<br> Professionals</span>
             </div>
         </div>
-    </section>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Quality Assured</span>
+            <h2 class="cs-title">Reliable Service is the Key to Our Success</h2>
+            <p class="cs-text">
+                Domestic Bliss was founded on the principle that a clean environment shouldn't be a luxury—it should be a standard. We serve landlords, property managers, and business owners across County Durham with a level of attention to detail that is unmatched in the region.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">Durham based local team.</li>
+                <li class="cs-li">No hidden fees or charges.</li>
+                <li class="cs-li">Personalised cleaning checklists.</li>
+                <li class="cs-li">Consistency guaranteed every visit.</li>
+            </ul>
+            <a class="cs-button-solid bubbly-button" aria-label="learn more about our programs" href="/contact">Get in Touch</a>
+        </div>
+    </div>
+</section>
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<section id="stats-1668">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-header">Projects Completed</span>
+                <span class="cs-number">886</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-header">Satisfied Customers</span>
+                <span class="cs-number">2k</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-header">Repeat Customers</span>
+                <span class="cs-number">475</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-header">Professional Team</span>
+                <span class="cs-number">37</span>
+            </li>
+        </ul>
+    </div>
+</section>
+                              <!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Trusted by Local Durham Businesses</h2>
+            <p class="cs-text">
+                Don't just take our word for it. Here is what local residents and business owners have to say about our attention to detail.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    Domestic Bliss has managed our office cleaning for over a year now. They are incredibly reliable and the attention to detail is far better than our previous national provider.
+                </p>
+                <span class="cs-name">Sarah Jenkins</span>
+                <span class="cs-job">Office Manager, Durham Tech</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    Excellent end-of-tenancy clean. The house looked brand new and helped us secure our full deposit back without any issues. Highly recommended!
+                </p>
+                <span class="cs-name">David Thompson</span>
+                <span class="cs-job">Durham Resident</span>
+            </li>
+        </ul>
+    </div>
+</section>  
 
     {% include 'sections/cta.html' %}
 
