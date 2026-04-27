@@ -58,7 +58,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <img src="{% getUrl "/assets/images/clean1.webp" | resize({ width: 842, height: 737 }) | jpeg %}" 
          alt="Professional cleaning service" 
          width="842" height="737" 
-         loading="lazy" 
+         fetchpriority="high"
          decoding="async" 
          aria-hidden="true">
 </picture>
