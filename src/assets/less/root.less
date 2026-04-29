@@ -1392,7 +1392,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            gap: (20/16rem);
+            gap: (8/16rem);
         }
 
         .cs-li {
@@ -1509,7 +1509,7 @@
             &.cs-active {
                 .cs-drop-ul {
                     height: auto;
-                    margin: (12/16rem) 0 0 0;
+                    margin: (12/16rem) auto 0 auto;
                     padding: (12/16rem) 0;
                     opacity: 1;
                     visibility: visible;
@@ -1536,11 +1536,12 @@
         }
 
         .cs-drop-ul {
-            width: 100%;
+            width: (250/16rem);
             height: 0;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
-            background-color: var(--primary);
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: (16/16rem);
             overflow: hidden;
             opacity: 0;
             display: flex;
@@ -3307,7 +3308,27 @@
 
 /* Mobile menu open state dark fix */
 @media only screen and (max-width: 1023.5px) {
-   body.dark-mode.cs-open {
+    #cs-navigation .cs-ul {
+        z-index: 100010;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        max-height: 85vh;
+        height: auto;
+        width: 100%;
+        overflow: scroll;
+        // padding: 9.375rem 0 0 0;
+        gap: 1.75rem;
+    }
+
+    #cs-navigation .cs-li-link{
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    body.dark-mode.cs-open {
        #cs-navigation {
            background-color: var(--medium);
        }
@@ -3478,3 +3499,6 @@
    }
 }
 
+  *:focus {
+      outline: none;
+  }
