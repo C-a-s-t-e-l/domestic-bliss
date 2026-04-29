@@ -1,21 +1,19 @@
 {
-  "name": "Starter Kit",
-  "short_name": "Starter Kit",
+  "name": "Domestic Bliss Cleaning Services",
+  "short_name": "Domestic Bliss",
   "icons": [
     {
-      "src": "/assets/favicons/web-app-manifest-192x192.png",
+      "src": "/assets/favicons/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
-      "src": "/assets/favicons/web-app-manifest-512x512.png",
+      "src": "/assets/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#0C3B8F",
   "background_color": "#ffffff",
   "display": "standalone"
 }
