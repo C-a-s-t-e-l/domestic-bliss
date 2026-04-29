@@ -13,8 +13,10 @@
 @media only screen and (min-width: 0rem) {
     #hero-408 {
         padding: var(--sectionPadding);
-        /* 112px - 200px */
-        padding-top: clamp(12rem, 20vw, 14.5rem);
+        /* 200px - 256px */
+        padding-top: clamp(12.5rem, 20vw, 16rem);
+        /* 100px - 128px */
+        padding-bottom: clamp(6.25rem, 10vw, 8rem);
         padding-right: 0;
 
         .cs-container {
@@ -37,6 +39,8 @@
             justify-content: flex-start;
             align-items: center;
             flex-wrap: wrap;
+            /* 20px gap between buttons; prevents scale(1.05) hover from colliding */
+            column-gap: (20/16rem);
         }
 
         .cs-title {
@@ -54,7 +58,7 @@
 
         .cs-color {
             color: var(--primary);
-            display: block;
+            // display: block;
         }
 
         .cs-text {
@@ -478,15 +482,16 @@
 
         .cs-link {
             /* 16px - 20px */
+            z-index: 10;
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: var(--headerFont);
             font-size: clamp(1rem, 1.5vw, 1.25rem);
             line-height: 1.5em;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-decoration: none;
-            margin: 0;
             color: var(--primary);
-            display: inline-block;
-            position: relative;
 
             &:hover {
                 &:before {

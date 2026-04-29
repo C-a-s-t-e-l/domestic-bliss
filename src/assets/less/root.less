@@ -221,12 +221,12 @@
 
 	body.dark-mode {
 		#cs-footer-710 {
-        background-color: var(--dark);
-    }
-    
-	#cs-footer-710 img{
-		        filter: grayscale(1) brightness(2000%);
-	}
+			background-color: var(--dark);
+
+			.cs-graphic {
+				display: none;
+			}
+		}
 		.cs-light,
 		.light {
 			display: none !important;
@@ -364,8 +364,9 @@
 		border: none;
 		display: block;
 		position: absolute;
-		top: (10/16rem);
+		top: 50%;
 		right: (70/16rem);
+		transform: translateY(-50%);
 		z-index: 1000;
 		overflow: hidden;
 
@@ -730,15 +731,7 @@
 		}
 	}
 
-	#cs-navigation {
-		&.cs-active {
-			#dark-mode-toggle {
-				.cs-moon {
-					fill: #fff;
-				}
-			}
-		}
-	}
+	/* moon fill is left at its natural dark colour — nav stays white in light mode */
 
 	#dark-mode-toggle {
 		width: (48/16rem);
@@ -819,8 +812,6 @@
 			overflow: hidden;
 
 			#cs-navigation {
-				background-color: rgba(26, 26, 26, 1);
-
 				&::before {
 					height: 100vh;
 					opacity: 1;
@@ -1137,7 +1128,7 @@
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
             padding: (16/16rem) (24/16rem);
-            background-color: #f7f7f7;
+            background-color: var(--primary);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1160,7 +1151,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            color: var(--bodyTextColor);
+            color: #fff;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -1176,6 +1167,7 @@
             width: (16/16rem);
             height: auto;
             display: block;
+            filter: brightness(0) invert(1);
         }
 
         .cs-top-social {
@@ -2030,9 +2022,8 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #banner-843 {
-        /* 175px - 260px top */
-        padding: clamp(10.9375rem, 20vw, 16.25rem) (16/16rem)
-            clamp(6.25rem, 14vw, 12vw);
+        /* 200px - 256px top, 100px - 128px bottom */
+        padding: clamp(12.5rem, 20vw, 16rem) (16/16rem) clamp(6.25rem, 10vw, 8rem);
         /* clips svg wave from causing overflow issues */
         overflow: hidden;
         position: relative;
@@ -2195,7 +2186,7 @@
 
         h3 {
             font-size: (24/16rem);
-            color: var(--primary);
+            color: var(--headerColor);
         }
 
         h4,
@@ -2397,16 +2388,12 @@
         #content-page-713 {
             background-color: var(--dark);
 
-            .cs-color,
-            .cs-text,
             h2,
             h3,
             h4,
             h5,
-            h6,
-            li,
-            p {
-                color: var(--secondary);
+            h6 {
+                color: var(--bodyTextColorWhite);
             }
             
             a {
@@ -2711,6 +2698,7 @@
         }
 
         .cs-header {
+            font-family: var(--navLinkFont);
             font-size: (16/16rem);
             line-height: 1.2em;
             font-weight: 700;
@@ -2727,6 +2715,39 @@
             margin: 0;
             color: #fff;
             display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            position: relative;
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                /* on hover underline */
+                content: "";
+                width: 0%;
+                height: 1px;
+                background: currentColor;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                transition: width 0.3s;
+            }
+        }
+
+        .cs-longLink {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            text-decoration: none;
+            margin: 0;
+            color: #fff;
+            // display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             position: relative;
