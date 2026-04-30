@@ -673,7 +673,7 @@
 
 			&.cs-active {
 				&:before {
-					display: block;
+					display: none;
 				}
 			}
 		}
@@ -1034,8 +1034,10 @@
         margin-left: (16/16rem);
         order: 3;
         position: relative;
+        top: auto;
         right: auto;
         bottom: auto;
+        transform: none;
     }
 }
 
@@ -1472,9 +1474,9 @@
 
             &.cs-active {
                 color: var(--primary);
-                &:before {
-                    display: block;
-                }
+                // &:before {
+                //     // display: block;
+                // }
             }
 
             &:hover {
@@ -2023,15 +2025,15 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #banner-843 {
-        /* 200px - 256px top, 100px - 128px bottom */
-        padding: clamp(12.5rem, 20vw, 16rem) (16/16rem) clamp(6.25rem, 10vw, 8rem);
+        /* 224px - 288px top, 128px - 160px bottom */
+        padding: clamp(13.9375rem, 20vw, 21.25rem) 1rem clamp(6.25rem, 14vw, 12vw);
         /* clips svg wave from causing overflow issues */
         overflow: hidden;
         position: relative;
         z-index: 1;
 
         .cs-container {
-            text-align: center;
+            // text-align: center;
             width: 100%;
             max-width: (1280/16rem);
             margin: auto;
@@ -2046,6 +2048,7 @@
         .cs-int-title {
             /* 39px - 61px */
             font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+            font-family: var(--headerFont);
             font-weight: 900;
             line-height: 1.2em;
             text-align: inherit;

@@ -13,8 +13,8 @@
 @media only screen and (min-width: 0rem) {
     #hero-408 {
         padding: var(--sectionPadding);
-        /* 200px - 256px */
-        padding-top: clamp(12.5rem, 20vw, 16rem);
+        /* 224px - 288px */
+        padding-top: clamp(12rem, 22vw, 15rem);
         /* 100px - 128px */
         padding-bottom: clamp(6.25rem, 10vw, 8rem);
         padding-right: 0;
@@ -33,10 +33,11 @@
         }
 
         .cs-content {
+            width: 100%;
             max-width: (630/16rem);
-            padding-right: (16/16rem);
+            padding: 0 (16/16rem);
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             /* 20px gap between buttons; prevents scale(1.05) hover from colliding */
@@ -44,11 +45,10 @@
         }
 
         .cs-title {
-            /* 31px - 61px */
-            font-size: clamp(1.9375rem, 4.4vw, 3.8125rem);
+            font-size: clamp(2rem, 4.4vw, 3.5rem);
             font-weight: 900;
             line-height: 1.2em;
-            text-align: left;
+            text-align: center;
             max-width: (700/16rem);
             /* 12px - 24px */
             margin: 0 0 clamp(0.75rem, 1.5vw, 1.5rem);
@@ -65,7 +65,7 @@
             /* 16px - 25px */
             font-size: clamp(1rem, 2vw, 1.5625rem);
             line-height: 1.5em;
-            text-align: left;
+            text-align: center;
             width: 100%;
             max-width: (650/16rem);
             margin: 0;
@@ -256,10 +256,14 @@
             flex-direction: row;
             justify-content: flex-end;
         }
-
         .cs-content {
-            width: 45%;
-            padding: 0;
+            justify-content: flex-start;
+        }
+        .cs-title {
+            text-align: left;
+        }
+        .cs-text {
+            text-align: left;
         }
 
         .cs-stat-group {
@@ -697,6 +701,7 @@
             border-radius: (16/16rem);
             border: 1px solid #e8e8e8;
             box-sizing: border-box;
+            cursor: pointer;
             transition: background-color 0.3s;
 
             &:hover {
