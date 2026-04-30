@@ -12,6 +12,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <link rel="preload" as="image"
           imagesrcset="{% getUrl "/assets/images/clean1.webp" | resize({ width: 600, height: 525 }) | webp %} 600w, {% getUrl "/assets/images/clean1.webp" | resize({ width: 842, height: 737 }) | webp %} 842w"
           imagesizes="(max-width: 600px) 600px, 842px"
+          fetchpriority="high"
           type="image/webp"/>
     <!-- Critical styles are loaded first -->
     <link rel="stylesheet" href="/assets/css/critical.css"/>
