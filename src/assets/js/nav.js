@@ -245,6 +245,13 @@
 		},
 	};
 
+	// Scroll handling — adds body.scroll to hide top bar and trigger nav transitions
+	const handleScroll = () => {
+		document.body.classList.toggle("scroll", window.scrollY > 100);
+	};
+	window.addEventListener("scroll", handleScroll, { passive: true });
+	handleScroll();
+
 	// Initialize navigation system
 	init.inertState();
 	init.eventListeners();

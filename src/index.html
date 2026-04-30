@@ -60,12 +60,12 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             srcset="{% getUrl "/assets/images/clean1.webp" | resize({ width: 842, height: 737 }) | webp %}" 
             type="image/webp">
 
-    <img src="{% getUrl "/assets/images/clean1.webp" | resize({ width: 842, height: 737 }) | jpeg %}" 
-         alt="Professional cleaning service" 
-         width="842" height="737" 
-         fetchpriority="high"
-         decoding="async" 
-         aria-hidden="true">
+    <img 
+    src="{% getUrl "/assets/images/clean1.webp" | resize({ width: 842, height: 737 }) | jpeg %}" 
+    alt="Professional cleaning service" 
+    width="842" 
+    height="737" 
+    fetchpriority="high">
 </picture>
             <div class="cs-stat-box">
                 <span class="cs-stat">
@@ -232,11 +232,15 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         </div>
     </div>
     <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="https://images.metroglass.co.nz/eyJidWNrZXQiOiJtZXRyb2dsYXNzLXdlYnNpdGUtcHJvZC1hc3NldHMiLCJrZXkiOiJpbWFnZXNcLzMtcmVzb3VyY2VzXC9pbmZvcm1hdGlvbi1odWJcL2NhcmVfYW5kX21haW50ZW5hbmNlXC9hZG9iZXN0b2NrXzEwNzUwNjk1OS5qcGciLCJlZGl0cyI6W119">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="https://images.metroglass.co.nz/eyJidWNrZXQiOiJtZXRyb2dsYXNzLXdlYnNpdGUtcHJvZC1hc3NldHMiLCJrZXkiOiJpbWFnZXNcLzMtcmVzb3VyY2VzXC9pbmZvcm1hdGlvbi1odWJcL2NhcmVfYW5kX21haW50ZW5hbmNlXC9hZG9iZXN0b2NrXzEwNzUwNjk1OS5qcGciLCJlZGl0cyI6W119">
-        <img loading="lazy" decoding="async" src="https://images.metroglass.co.nz/eyJidWNrZXQiOiJtZXRyb2dsYXNzLXdlYnNpdGUtcHJvZC1hc3NldHMiLCJrZXkiOiJpbWFnZXNcLzMtcmVzb3VyY2VzXC9pbmZvcm1hdGlvbi1odWJcL2NhcmVfYW5kX21haW50ZW5hbmNlXC9hZG9iZXN0b2NrXzEwNzUwNjk1OS5qcGciLCJlZGl0cyI6W119" alt="texture" width="1280" height="568">
+        <source media="(max-width: 600px)"
+                srcset="{% getUrl "/assets/images/wash-bg.jfif" | resize({ width: 800 }) | webp %}"
+                type="image/webp">
+        <source media="(min-width: 601px)"
+                srcset="{% getUrl "/assets/images/wash-bg.jfif" | resize({ width: 1280 }) | webp %}"
+                type="image/webp">
+        <img loading="lazy" decoding="async"
+             src="{% getUrl "/assets/images/wash-bg.jfif" | resize({ width: 1280 }) | jpeg %}"
+             alt="" aria-hidden="true" width="1280" height="568">
     </picture>
 </section>
                                 
@@ -431,11 +435,15 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         </div>
     </div>
     <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="https://static.vecteezy.com/system/resources/previews/021/552/320/non_2x/squeegee-cleaning-glass-against-blue-sky-background-in-3d-illustration-ad-background-for-glass-cleaning-product-vector.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="https://static.vecteezy.com/system/resources/previews/021/552/320/non_2x/squeegee-cleaning-glass-against-blue-sky-background-in-3d-illustration-ad-background-for-glass-cleaning-product-vector.jpg">
-        <img loading="lazy" decoding="async" src="https://static.vecteezy.com/system/resources/previews/021/552/320/non_2x/squeegee-cleaning-glass-against-blue-sky-background-in-3d-illustration-ad-background-for-glass-cleaning-product-vector.jpg" alt="clean" width="1280" height="568">
+        <source media="(max-width: 600px)"
+                srcset="{% getUrl "/assets/images/wash-bg2.jpg" | resize({ width: 800 }) | webp %}"
+                type="image/webp">
+        <source media="(min-width: 601px)"
+                srcset="{% getUrl "/assets/images/wash-bg2.jpg" | resize({ width: 1280 }) | webp %}"
+                type="image/webp">
+        <img loading="lazy" decoding="async"
+             src="{% getUrl "/assets/images/wash-bg2.jpg" | resize({ width: 1280 }) | jpeg %}"
+             alt="" aria-hidden="true" width="1280" height="568">
     </picture>
 </section>
                                 
@@ -777,9 +785,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                                 
 
     <script>
-
-        
-        
+    
         const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
         for (const item of faqItems) {
             const onClick = () => {
