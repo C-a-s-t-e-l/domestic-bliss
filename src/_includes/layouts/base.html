@@ -33,6 +33,32 @@
         <meta name="apple-mobile-web-app-title" content="Domestic Bliss"/>
         <link rel="manifest" href="/assets/favicons/site.webmanifest"/>
 
+        <!-- Inline: CSS variables, base reset, nav scaffold — zero network request, no blocking -->
+        <style>
+            :root {
+                --primary: #0C3B8F;
+                --primaryLight: #2F6FE4;
+                --secondary: #FF4FA3;
+                --secondaryLight: #FFC1DC;
+                --dark: #082032;
+                --medium: #1B2A41;
+                --accent: #334756;
+                --headerColor: #1a1a1a;
+                --bodyTextColor: #4E4B66;
+                --bodyTextColorWhite: #FAFBFC;
+                --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+                --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+                --bodyFontSize: clamp(1.1rem, 1.5vw, 1.25rem);
+                --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+                --headerFont: "Bungee", sans-serif;
+                --bodyFont: "Abel", sans-serif;
+                --navLinkFont: "Bungee", sans-serif;
+            }
+            html, body { margin: 0; padding: 0; overflow-x: hidden; font-family: var(--bodyFont); font-size: 100%; color: var(--bodyTextColor); }
+            *, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0; }
+            #cs-navigation { width: 100%; background-color: #fff; box-shadow: rgba(149,157,165,0.2) 0px 8px 24px; position: fixed; top: 0; left: 0; z-index: 10000; }
+        </style>
+
         {% block head %}{% endblock %}
 
         <!-- Google Fonts — single request, async to avoid render-blocking -->
@@ -41,8 +67,13 @@
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bungee&family=Abel&display=swap" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Abel&display=swap"></noscript>
 
-        <!-- Sitewide Stylesheets and Scripts -->
-        <link rel="stylesheet" href="/assets/css/root.css">
+        <!-- Root styles: deferred in production, blocking in dev -->
+        {% if client.isProduction %}
+            <link rel="preload" href="/assets/css/root.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript><link rel="stylesheet" href="/assets/css/root.css"></noscript>
+        {% else %}
+            <link rel="stylesheet" href="/assets/css/root.css">
+        {% endif %}
         <script defer src="/assets/js/dark.js"></script>
         <script defer src="/assets/js/nav.js"></script>
 
